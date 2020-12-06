@@ -16,6 +16,12 @@
         </div>
     </div>
     <span class='bigText'>LOGIN</span>
-    
+    <form action="/login" method='POST'>
+        <label for='login'>Nazwa Użytkownika:</label>
+        <input type="text" name='login' required><br>
+        <label for='password'>Hasło:</label>
+        <input type="password" name='password' required><br>
+        <input type="submit" value='Zaloguj'>
+    </form>
 </body>
 </html>
