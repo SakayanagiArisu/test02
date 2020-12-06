@@ -8,6 +8,8 @@ app.use(bodyParser.urlencoded({ extended: true }));
 
 app.use(express.static('static'));
 
+var path = require("path")
+
 var users = [
     {log: 'aaa', pass: 'qwerty', uczen: 'checked', plec: 'm', id: 1, wiek: 18},
     {log: 'bbb', pass: '1234', uczen: 'checked', plec: 'k', id: 2, wiek: 12},
