@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    text-align: center;
+}
+
+#error {
+    background-color: red;
+}
+
+#admin {
+    background-color: yellow;
+}
+
+#normal {
+    background-color: blue;
+}
+
+.header {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.container {
+    margin-left: 10px;
+    display: flex;
+    width: 220px;
+    justify-content: space-around;
+}
+
+a {
+    color: white;
+}
+
+.bigText {
+    color: lightgray;
+    font-size: 150px;
+}
+
+td {
+    border: solid;
+    padding: 0 20px;
+    font-size: 30px;
+}
