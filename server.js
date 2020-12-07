@@ -72,7 +72,14 @@ app.post("/login", function(req, res){
 })
 
 app.get("/admin", function (req, res) {
-    if(active == 'aaa'){
+    let test = false;
+    for(let i = 0; i < users.length; i++){
+        if(users[0]['log'] == active){
+            test = true;
+            break
+        }
+    }
+    if(test){
         res.sendFile(path.join(__dirname + "/static/admin.html"));
     }else{
         res.sendFile(path.join(__dirname + "/static/error.html"));
@@ -80,7 +87,14 @@ app.get("/admin", function (req, res) {
 })
 
 app.get("/show", function (req, res) {
-    if(active == 'aaa'){
+    let test = false;
+    for(let i = 0; i < users.length; i++){
+        if(users[0]['log'] == active){
+            test = true;
+            break
+        }
+    }
+    if(test){
         let html = `
         <!DOCTYPE html>
         <html lang="en">
@@ -118,7 +132,14 @@ app.get("/show", function (req, res) {
 })
 
 app.get("/gender", function (req, res) {
-    if(active == 'aaa'){
+    let test = false;
+    for(let i = 0; i < users.length; i++){
+        if(users[0]['log'] == active){
+            test = true;
+            break
+        }
+    }
+    if(test){
         let p = ''
         let r = ''
         for(let i = 0; i < users.length; i++){
@@ -167,7 +188,14 @@ app.get("/gender", function (req, res) {
 })
 
 app.get("/sort", function (req, res) {
-    if(active == 'aaa'){
+    let test = false;
+    for(let i = 0; i < users.length; i++){
+        if(users[0]['log'] == active){
+            test = true;
+            break
+        }
+    }
+    if(test){
         let Tab1 = [...users]
         let Tab2 = []
         while(Tab2.length < users.length){
