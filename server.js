@@ -55,6 +55,11 @@ app.get("/login", function (req, res) {
     res.sendFile(path.join(__dirname + "/static/login.html"));
 })
 
+app.get("/logout", function (req, res) {
+    res.sendFile(path.join(__dirname + "/static/login.html"));
+    active == null;
+})
+
 app.post("/login", function(req, res){
     let test = true;
     for(let i = 0; i < users.length; i++){
@@ -71,13 +76,7 @@ app.post("/login", function(req, res){
 })
 
 app.get("/admin", function (req, res) {
-    let test = false;
-    for(let i = 0; i < users.length; i++){
-        if(users[i]['log'] == active){
-            test = true;
-        }
-    }
-    if(test){
+    if(active != null){
         res.sendFile(path.join(__dirname + "/static/admin.html"));
     }else{
         res.sendFile(path.join(__dirname + "/static/error.html"));
@@ -85,14 +84,7 @@ app.get("/admin", function (req, res) {
 })
 
 app.get("/show", function (req, res) {
-    let test = false;
-    for(let i = 0; i < users.length; i++){
-        if(users[i]['log'] == active){
-            test = true;
-            break
-        }
-    }
-    if(test){
+    if(active != null){
         let html = `
         <!DOCTYPE html>
         <html lang="en">
@@ -130,14 +122,7 @@ app.get("/show", function (req, res) {
 })
 
 app.get("/gender", function (req, res) {
-    let test = false;
-    for(let i = 0; i < users.length; i++){
-        if(users[i]['log'] == active){
-            test = true;
-            break
-        }
-    }
-    if(test){
+    if(active != null){
         let p = ''
         let r = ''
         for(let i = 0; i < users.length; i++){
@@ -186,14 +171,7 @@ app.get("/gender", function (req, res) {
 })
 
 app.get("/sort", function (req, res) {
-    let test = false;
-    for(let i = 0; i < users.length; i++){
-        if(users[i]['log'] == active){
-            test = true;
-            break
-        }
-    }
-    if(test){
+    if(teactive != nullst){
         let Tab1 = [...users]
         let Tab2 = []
         while(Tab2.length < users.length){
