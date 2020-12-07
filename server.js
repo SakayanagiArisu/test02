@@ -72,18 +72,19 @@ app.post("/login", function(req, res){
 
 app.get("/admin", function (req, res) {
     let test = false;
+    let p = []
     for(let i = 0; i < users.length; i++){
-        console.log(users[0]['log'], active)
+        p.push([users[0]['log'], active])
         if(users[0]['log'] == active){
             test = true;
-            break
         }
     }
-    if(test){
-        res.sendFile(path.join(__dirname + "/static/admin.html"));
-    }else{
-        res.sendFile(path.join(__dirname + "/static/error.html"));
-    }
+    res.send(p)
+    //if(test){
+    //    res.sendFile(path.join(__dirname + "/static/admin.html"));
+    //}else{
+    //    res.sendFile(path.join(__dirname + "/static/error.html"));
+    //}
 })
 
 app.get("/show", function (req, res) {
