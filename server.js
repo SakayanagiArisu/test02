@@ -171,7 +171,7 @@ app.get("/gender", function (req, res) {
 })
 
 app.get("/sort", function (req, res) {
-    if(teactive != nullst){
+    if(active != null){
         let Tab1 = [...users]
         let Tab2 = []
         while(Tab2.length < users.length){
