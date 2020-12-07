@@ -9,6 +9,7 @@ body {
 
 #admin {
     background-color: yellow;
+    justify-content: space-between;
 }
 
 #normal {

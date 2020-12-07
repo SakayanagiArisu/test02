@@ -56,8 +56,8 @@ app.get("/login", function (req, res) {
 })
 
 app.get("/logout", function (req, res) {
-    res.sendFile(path.join(__dirname + "/static/login.html"));
-    active == null;
+    res.sendFile(path.join(__dirname + "/static/logout.html"));
+    active = null;
 })
 
 app.post("/login", function(req, res){
