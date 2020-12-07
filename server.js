@@ -73,6 +73,7 @@ app.post("/login", function(req, res){
 app.get("/admin", function (req, res) {
     let test = false;
     for(let i = 0; i < users.length; i++){
+        console.log(users[0]['log'], active)
         if(users[0]['log'] == active){
             test = true;
             break
