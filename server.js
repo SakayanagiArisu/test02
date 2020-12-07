@@ -57,7 +57,6 @@ app.get("/login", function (req, res) {
 
 app.post("/login", function(req, res){
     let test = true;
-    it = null;
     for(let i = 0; i < users.length; i++){
         if(users[i]['log'] == req.body.login && users[i]['pass'] == req.body.password){
             test = false;
