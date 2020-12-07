@@ -72,25 +72,22 @@ app.post("/login", function(req, res){
 
 app.get("/admin", function (req, res) {
     let test = false;
-    let p = []
     for(let i = 0; i < users.length; i++){
-        p.push([users[0]['log'], active])
-        if(users[0]['log'] == active){
+        if(users[i]['log'] == active){
             test = true;
         }
     }
-    res.send(p)
-    //if(test){
-    //    res.sendFile(path.join(__dirname + "/static/admin.html"));
-    //}else{
-    //    res.sendFile(path.join(__dirname + "/static/error.html"));
-    //}
+    if(test){
+        res.sendFile(path.join(__dirname + "/static/admin.html"));
+    }else{
+        res.sendFile(path.join(__dirname + "/static/error.html"));
+    }
 })
 
 app.get("/show", function (req, res) {
     let test = false;
     for(let i = 0; i < users.length; i++){
-        if(users[0]['log'] == active){
+        if(users[i]['log'] == active){
             test = true;
             break
         }
@@ -135,7 +132,7 @@ app.get("/show", function (req, res) {
 app.get("/gender", function (req, res) {
     let test = false;
     for(let i = 0; i < users.length; i++){
-        if(users[0]['log'] == active){
+        if(users[i]['log'] == active){
             test = true;
             break
         }
@@ -191,7 +188,7 @@ app.get("/gender", function (req, res) {
 app.get("/sort", function (req, res) {
     let test = false;
     for(let i = 0; i < users.length; i++){
-        if(users[0]['log'] == active){
+        if(users[i]['log'] == active){
             test = true;
             break
         }
